@@ -505,7 +505,7 @@ def main():
             
             if cm_tert_class_lreg_chbox:
                 image_CM_teriary_class_logreg = Image.open("figCMLogisticregression.png")
-                st.image(image_CM_teriary_class_logreg, caption="Classification logistique multinominale: matrices de confusion pour différentes méthodes de word embedding avec la régression logistique.")
+                st.image(image_CM_teriary_class_logreg, caption="Classification logistique multinomiale: matrices de confusion pour différentes méthodes de word embedding avec la régression logistique.")
                 st.write()
                 st.write("Parmi les bonnes prédictions, seules la classe 'neutre' atteint les 50% à l'exception de la prédiction de la classe négative avec régression logistique.")
         #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -513,16 +513,16 @@ def main():
                 
             if report_tert_class_lreg_chbox:
                 image_Report_teriary_class_logreg = Image.open("figReportLogisticregression.png")
-                st.image(image_Report_teriary_class_logreg, caption="Classification logistique multinominale: comparaison entre les méthodes de word embedding avec la régression logistique.")
+                st.image(image_Report_teriary_class_logreg, caption="Classification logistique multinomiale: comparaison entre les méthodes de word embedding avec la régression logistique.")
                 st.write()
                 st.write("Avec la régression logistique les deux méthodes BOW et Tf-Idf sont presque au même niveau en terme de précision et semblent être les plus précises dans la prédiction des classes.")
         
 #°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 
-        st.subheader("2. Random Forest (classification logistique multinominale)")
+        st.subheader("2. Random Forest (classification logistique multinomiale)")
 
 
-        columns_tert_class_rf = ["Matrices de confusion RF (classification logistique multinominale)", "Comparaison des méthodes de W-embedding pour RF (classification logistique multinominale)"]
+        columns_tert_class_rf = ["Matrices de confusion RF (classification logistique multinomiale)", "Comparaison des méthodes de W-embedding pour RF (classification logistique multinomiale)"]
 
         cm_tert_class_rf_chbox = st.checkbox(columns_tert_class_rf[0])
         #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -534,7 +534,7 @@ def main():
             
             if cm_tert_class_rf_chbox:
                 image_CM_teriary_class_rf = Image.open("figCMRandomforest.png")
-                st.image(image_CM_teriary_class_rf, caption="Classification logistique multinominale: matrices de confusion pour différentes méthodes de word embedding avec Random Forest.")
+                st.image(image_CM_teriary_class_rf, caption="Classification logistique multinomiale: matrices de confusion pour différentes méthodes de word embedding avec Random Forest.")
                 st.write()
                 st.write("La classe neutre globalement prédite avec plus de 50% parmi les bonnes prédictions")
                 st.write()
@@ -544,15 +544,15 @@ def main():
                 
             if report_tert_class_rf_chbox:
                 image_Report_teriary_class_rf = Image.open("figReportRandomForest.png")
-                st.image(image_Report_teriary_class_rf, caption="Classification logistique multinominale: comparaison entre les méthodes de word embedding avec Random Forest.")
+                st.image(image_Report_teriary_class_rf, caption="Classification logistique multinomiale: comparaison entre les méthodes de word embedding avec Random Forest.")
                 st.write()
                 st.write("La méthode Tf-Idf semble mieux prédire globalement avec le modèle Random Forest.")
 
         
 #°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-        st.subheader("3. XGBoost (classification logistique multinominale)")
+        st.subheader("3. XGBoost (classification logistique multinomiale)")
        
-        columns_binary_class_xgb = ["Matrices de confusion XGBoost (classification logistique multinominale)", "Comparaison des méthodes de W-embedding avec XGBoost (classification logistique multinominale)"]
+        columns_binary_class_xgb = ["Matrices de confusion XGBoost (classification logistique multinomiale)", "Comparaison des méthodes de W-embedding avec XGBoost (classification logistique multinominale)"]
 
         cm_tert_class_xgb_chbox = st.checkbox(columns_binary_class_xgb[0])
         #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -564,7 +564,7 @@ def main():
             
             if cm_tert_class_xgb_chbox:
                 image_CM_teriary_class_xgb = Image.open("figCMXGBoost.png")
-                st.image(image_CM_teriary_class_xgb, caption="Classification logistique multinominale: matrices de confusion pour différentes méthodes de word embedding avec XGBoost.")
+                st.image(image_CM_teriary_class_xgb, caption="Classification logistique multinomiale: matrices de confusion pour différentes méthodes de word embedding avec XGBoost.")
                 st.write()
                 st.write("Résultats analogues aux précédents: la classe neutre globalement prédite avec plus de 50% parmi les bonnes prédictions")
                 st.write()
@@ -574,14 +574,14 @@ def main():
                 
             if report_tert_class_xgb_chbox:
                 image_Report_teriary_class_xgb = Image.open("figReportXGBoost.png")
-                st.image(image_Report_teriary_class_xgb, caption="Classification logistique multinominale: comparaison entre les méthodes de word embedding avec Random Forest.")
+                st.image(image_Report_teriary_class_xgb, caption="Classification logistique multinomiale: comparaison entre les méthodes de word embedding avec Random Forest.")
                 st.write()
-                st.write("Meilleure précision (accuracy) globale par la méthode BOW avec le modèle de classification multinominale via XGBoost.")
+                st.write("Meilleure précision (accuracy) globale par la méthode BOW avec le modèle de classification multinomiale via XGBoost.")
         
         
-        st.subheader("!!! Discussion sur la classification logistique multinominale à 3 classes")
+        st.subheader("!!! Discussion sur la classification logistique multinomiale à 3 classes")
         
-        commentaire_tert_class_chbox = st.checkbox("Discussions sur la classification multinominale")
+        commentaire_tert_class_chbox = st.checkbox("Discussions sur la classification multinomiale")
 
         col_multiclas_chart, col_multiclas_repartition_graph = st.columns(2)
         
@@ -602,7 +602,7 @@ def main():
             
             with col_multiclas_repartition_graph:
                    image_multiclass_repartion = Image.open("figmulticlassrepartition.png")
-                   st.image(image_multiclass_repartion,use_column_width=True, caption="Répartion des classes pour la classification multinominale.")
+                   st.image(image_multiclass_repartion,use_column_width=True, caption="Répartion des classes pour la classification multinomiale.")
 
 
         
